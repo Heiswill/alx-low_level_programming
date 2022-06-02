@@ -1,9 +1,9 @@
 #include <stdio.h>
 
  /**
-  * main - Printing strings
-  * This program prints a string without the printf
-  * Return: 0
+  * main - Print a string using the puts function
+  *
+  * Return: Always 0 (Success)
   */
 int main(void)
 {
