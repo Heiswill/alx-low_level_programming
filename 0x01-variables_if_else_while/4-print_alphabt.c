@@ -1,19 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - print alphabet except letters q & e
  *
- * Return: 0 (success)
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	char lt;
+	char ch;
 
-	for (lt = 'a'; lt = 'z'; lt++)
+	for (ch = 'a'; ch = 'z'; ch++)
 	{
-		if (lt != 'q' && lt != 'e')
+		if (ch != 'q' && ch != 'e')
 		{
-			putchar(lt);
+			putchar(ch);
 		}
 	}
 	putchar('\n');
