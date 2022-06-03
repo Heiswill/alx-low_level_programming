@@ -6,6 +6,7 @@
   * Return: Always 0(Success)
   */
 int main(void)
+/*main - size of data types*/
 {
 	int a;
 	long int b;
