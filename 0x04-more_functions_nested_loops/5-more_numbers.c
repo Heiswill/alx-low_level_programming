@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * more_numbers - Prints numbers from 0 to 9, 10 times,followed
- * 	 by a new line.
- * Return: Always 0
+ * more_numbers - function that checks for uppercase character
+ * Return: 0
  */
 void more_numbers(void)
 {
