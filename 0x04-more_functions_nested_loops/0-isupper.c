@@ -5,18 +5,19 @@
  * @c: An input character
  * Return: 1 if c is uppercase or 0 otherwise
  */
-int main(int c)
+int _isupper(int c)
 {
 	char ch = 'A';
 	int i = 0;
 
 	for (; ch <= 'Z'; ch++)
 	{
-		if (c = ch)
+		if (c == ch)
 		{
 			i = 1;
 			break;
 		}
 	}
-	return (1);
+
+	return (i);
 }
