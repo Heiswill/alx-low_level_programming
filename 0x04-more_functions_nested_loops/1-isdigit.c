@@ -5,13 +5,13 @@
  * @c: An input character
  * Return: 1 if c is a digit or 0 otherwise
  */
-int _isdigit(int c)
+int main(int c)
 {
-	int i = 0;
+	char i = '0';
 
-	for (i = 0; i <=9; i++)
+	for (i = 0; i <= '9'; i++)
 	{
-		if (c != i)
+		if (i != c)
 		{
 			return (0);
 		}
