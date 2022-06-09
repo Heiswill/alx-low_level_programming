@@ -5,7 +5,7 @@
  * @c: An input character
  * Return: 1 if c is a digit or 0 otherwise
  */
-int main(int c)
+int _isdigit(int c)
 {
 	int i = 0;
 
