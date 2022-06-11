@@ -10,12 +10,12 @@ int main(void)
 {
 	int a, b, result, i;
 
-	a = 1;
-	b = 2;
+	a = '1';
+	b = '2';
 
-	for (i = 1; i <= 50; i++)
+	for (i = '1'; i <= '50'; i++)
 	{
-		_putchar(a);
+		_putchar(i);
 		_putchar(',');
 		_putchar(' ');
 		result = a + b;
