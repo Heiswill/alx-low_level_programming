@@ -15,12 +15,10 @@ int main(void)
 
 	for (i = '1'; i <= '50'; i++)
 	{
-		_putchar(i);
-		_putchar(',');
-		_putchar(' ');
+		printf("%d, ", a);
 		result = a + b;
 		a = b;
 		b = result;
 	}
-	_putchar('\n');
+	return (0);
 }
