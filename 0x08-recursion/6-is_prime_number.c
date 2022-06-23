@@ -1,4 +1,5 @@
 #include "main.h"
+int is_divisible(int n, int div);
 
 /**
  * is_prime_number - function that returns 1 if the input
@@ -8,23 +9,28 @@
  */
 int is_prime_number(int n)
 {
-	return (helper_prime(n, 2, n / 2));
+	int div = 2;
+
+	if (n <= 1)
+		return (0);
+	if (n <= 3)
+		return (1);
+	return (is_divisible(n, div));
 }
 
 /**
- * helper_prime - blank.
+ * is_divisible - check if n is divisible
  * @n: check
- * @i: for increment
- * @limit: stop
- * Return: 0
+ * @div: divisor
+ * Return: i if divisible, 0 otherwise.
  */
 
 int helper_prime(int n, int i, int limit)
 {
-	if ((n % i == 0 && i <= limit) || n < 0 || n == 1)
+	if (n % div == 0)
 		return (0);
-	else if (n % i != 0 && i <= limit)
-		return (helper_prime(n, i + 1, limit));
-	else
+	if (div == n / 2)
 		return (1);
+	else
+		return (is_divisible(n, div + 1));
 }
