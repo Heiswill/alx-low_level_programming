@@ -13,8 +13,10 @@ int is_prime_number(int n)
 
 	if (n <= 1)
 		return (0);
+
 	if (n <= 3)
 		return (1);
+
 	return (is_divisible(n, div));
 }
 
@@ -25,12 +27,14 @@ int is_prime_number(int n)
  * Return: i if divisible, 0 otherwise.
  */
 
-int helper_prime(int n, int i, int limit)
+int is_divisible(int n, int div)
 {
 	if (n % div == 0)
 		return (0);
+
 	if (div == n / 2)
 		return (1);
+
 	else
 		return (is_divisible(n, div + 1));
 }
