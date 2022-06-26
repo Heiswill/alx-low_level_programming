@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - function that returns a pointer to a newly
@@ -13,7 +14,7 @@ char *_strdup(char *str)
 	char *strar;
 	int i = 0, len = 0;
 
-	strar = malloc(sizeof(str));
+	strar = malloc(sizeof(char) * strlen(str));
 
 	if (str == NULL)
 		return (NULL);
