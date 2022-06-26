@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * _strdup - function that returns a pointer to a newly
@@ -11,28 +10,34 @@
  */
 char *_strdup(char *str)
 {
-	char *strar;
+	char *strar, *strar1;
 	int i = 0, len = 0;
-
-	strar = malloc(sizeof(char) * strlen(str));
 
 	if (str == NULL)
 		return (NULL);
 
-	while (str[i] != '\0')
+	strar = str;
+
+	while (*str)
 	{
 		len++;
-		i++;
+		str++;
 	}
 
-	if (strar == NULL)
-		return (NULL);
+	str = strar;
+	strar1 = malloc(sizeof(char) * (len + 1));
+	strar = strar1;
 
-	while (str[i] != '\0')
+	if (strar1 != NULL)
 	{
-		strar[i] = str[i];
-		i++;
+		for (; i < len; i++)
+		{
+			strar1[i] = *str;
+			str++;
+		}
+		strar1[i] = '\0';
+		return (strar);
 	}
-
-	return (strar);
+	else
+		return (NULL);
 }
