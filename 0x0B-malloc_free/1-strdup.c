@@ -24,15 +24,12 @@ char *_strdup(char *str)
 		i++;
 	}
 
-	if (strar != NULL)
-	{
-		for (; i < len; i++)
-		{
-			strar[i] = str[i];
-		}
-		strar[i] = '\0';
-		return (strar);
-	}
-	else
+	if (strar == NULL)
 		return (NULL);
+	while (str[i] != '\0')
+	{
+		strar[i] = str[i];
+		i++;
+	}
+	return (strar);
 }
