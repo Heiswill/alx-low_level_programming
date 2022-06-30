@@ -9,31 +9,18 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
+	unsigned int i = 0;
+
+	char *ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
-	_memset(ptr, 0, (nmemb * size));
+
+	for (; i < nmemb * size; i++)
+		*(ptr + i) = 0;
+
 	return (ptr);
-}
-
-/**
- * _memset - sets first n bytes of the memory area.
- * @s: array
- * @v: value to set
- * @n: number of bytes
- * Return: s
- */
-char *_memset(char *s, char v, unsigned int n)
-{
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-	{
-		s[i] = v;
-	}
-	return (s);
 }
