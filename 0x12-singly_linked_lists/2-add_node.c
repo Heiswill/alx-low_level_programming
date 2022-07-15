@@ -4,6 +4,22 @@
 #include <string.h>
 
 /**
+ * _strlen - Function to return len of a string.
+ * @str: str input
+ * Return: Number of characters in string.
+ */
+int _strlen(const char *str)
+{
+	int i;
+
+	if (str == NULL)
+		return (0);
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	return (i);
+}
+
+/**
  * add_node - function that adds a new node at the beginning
  * of a linked list.
  * @head: the pointer to the linked list
@@ -25,7 +41,7 @@ list_t *add_node(list_t **head, const char *str)
 		new_node->next = *head;
 
 	new_node->str = strdup(str);
-	new_node->len = strlen(str) + 1;
+	new_node->len = _strlen(str);
 	*head = new_node;
 	return (*head);
 }
