@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_listint_safe - prints a linked list safely
@@ -19,7 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 			head = head->next;
 		else
 		{
-			printf("-> [%p] %d\n", (void)head->next, head->next->n);
+			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
 			break;
 		}
 	}
