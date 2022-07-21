@@ -15,7 +15,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int decimal = 0, base;
 	int i;
 
-	for (i = 0;b[i] != '\0'; i++)
+	for (i = 0; b[i] != '\0'; i++)
 		;
 	for (i--, base = 1; i >= 0; i--, base *= 2)
 	{
