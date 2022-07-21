@@ -2,7 +2,7 @@
 
 /**
  * get_endianness - Checks the systems byte order
- * Rerurn: Return 0 if big endian 1 if little endian
+ * Return: Return 0 if big endian 1 if little endian
  */
 int get_endianness(void)
 {
