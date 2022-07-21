@@ -12,7 +12,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	unsigned long int tick;
 
 	tick = 1;
-	tick -= tick << index;
+	tick = tick << index;
 	if (index > sizeof(unsigned long int) * 8 || n == NULL)
 		return (-1);
 	if (((*n >> index) & 1) == 1) /*checks if 1 at position*/
