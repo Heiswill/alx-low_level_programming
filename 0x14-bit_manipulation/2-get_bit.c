@@ -7,7 +7,7 @@
  * @index: The index to look for the number
  * Return: A value at a given or -1 if an error occurs
  */
-in get_bit(unsigned long int n, unsigned int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i;
 
