@@ -12,7 +12,7 @@ void error_file(int file1, int file2, char *argv[])
 {
 	if (file1 == -1)
 	{
-		dprints(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	if (file2 == -1)
@@ -39,8 +39,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	file1 = open(argv[1], 0_RDONLY);
-	file2 = open(arv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	file1 = open(argv[1], O_RDONLY);
+	file2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(file1, file2, argv);
 
 	nchars = 1024;
