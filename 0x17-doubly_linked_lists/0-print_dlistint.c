@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include "lists.h"
 #include <stdlib.h>
-
+/**
+ * print_dlistint - prints all element in a doubly linked list
+ * @h: head
+ * Return: number of nodes
+ */
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t *temp = malloc(sizeof(size_t));
