@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * dlistlint_len - returns number of elements in a doubly linked list
+ * dlistint_len - returns number of elements in a doubly linked list
  * @h: pointer to dlist
  * Return: 0 if NULL
  */
