@@ -1,6 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 /**
  * sum_dlistint - summ of all data in the list
  * @head: pointer to list
