@@ -6,7 +6,7 @@
  * Return: key of the username
  **/
 
-int main()
+int main(void)
 {
 	return (key);
 }
