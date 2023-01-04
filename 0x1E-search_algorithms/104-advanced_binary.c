@@ -3,7 +3,7 @@
 #include "search_algos.h"
 
 /**
-  * advanced_binary_recursive - Searches recursively
+  * adv_binary_recursive - Searches recursively
   * @array: A pointer of the subarray to search.
   * @left: The starting index.
   * @right: The ending index.
@@ -32,7 +32,8 @@ int adv_binary_recursive(int *array, size_t left, size_t right, int value)
 }
 
 /**
-  * advanced_binary - Searches for a value in a sorted array using advanced binary search.
+  * advanced_binary - Searches for a value in a sorted array using advanced
+  * binary search.
   * @array: A pointer to the first element of the array to search.
   * @size: The size of the array.
   * @value: The value to search for.
