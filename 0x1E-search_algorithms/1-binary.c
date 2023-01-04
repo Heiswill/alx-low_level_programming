@@ -4,6 +4,7 @@
 
 /**
  * print_array - prints array.
+ * @array: Array of integers.
  * @left: first array element.
  * @right: last array element.
  * Return: Nothing.
@@ -30,25 +31,33 @@ void print_array(int *array, size_t left, size_t right)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int *arr = array;
-	size_t l = 0;
-	size_t r = size - 1;
-	size_t mid;
+	unsigned int left = 0, right;
+	int middle;
+
+	right = size - 1;
 
 	if (array == NULL)
 		return (-1);
 	if (size == 1)
-		return (array[l]);
-	while (l < r)
 	{
-		print_array(arr, l, r);
-		mid = (l + r) / 2;
-		if (value == arr[mid])
-			return (arr[mid]);
-		else if (value < arr[mid])
-			r = mid - 1;
-		else
-			l = mid + 1;
+		return (array[left]);
+	}
+	while (right >= left)
+	{
+		if (left == 0 && right == 0)
+			return (-1);
+		print_array(array, left, right);
+		middle = (right + left) / 2;
+		if (array[middle] == value)
+			return (array[middle]);
+		else if (array[middle] < value)
+		{
+			left = middle + 1;
+		}
+		else if (array[middle] > value)
+		{
+			right = middle;
+		}
 	}
 	return (-1);
 }
